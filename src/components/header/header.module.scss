@@ -1,0 +1,17 @@
+.header {
+
+  &__nav {
+    max-width: 1200px;
+    padding: 25px 15px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    color: #343434;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,17 @@
+.logo {
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    max-width: 90px;
+    font-size: 18px;
+    line-height: 1.11;
+    margin-left: 26px;
+    color: #000;
+    font-family: Open-Sans;
+  }
+}
