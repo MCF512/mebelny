@@ -3,6 +3,7 @@ declare module '*.scss' {
   export default css;
 }
 declare module 'react-markup';
+declare module 'react-slick';
 declare module '*.webp';
 declare module '*.png';
 declare module '*.jpg';

@@ -1,0 +1,48 @@
+import React from "react";
+import Slider from "react-slick";
+import { MainPageCard } from './Card/MainPageCard'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import './MainPageSlider.scss'
+
+interface MainPageItem {
+  btnBackgroundColor: string;
+  btnColor: string;
+  background: string;
+  image: any;
+  text: string;
+  btnText: string;
+  secondaryText: string;
+}
+
+interface sliderProps {
+  slidesToShow: number,
+  items: MainPageItem[]
+}
+
+export const MainPageSlider = ({ slidesToShow, items }: sliderProps) => {
+  const settings = {
+    dots: true,
+  }
+
+
+  return (
+    <div className='container'>
+      <Slider {...settings}>
+        {items.map(item => {
+          return (
+            <MainPageCard
+              btnBackgroundColor={item.btnBackgroundColor}
+              btnColor={item.btnColor}
+              background={item.background}
+              image={item.image}
+              text={item.text}
+              btnText={item.btnText}
+              secondaryText={item.secondaryText}
+            />
+          )
+        })}
+      </Slider>
+    </div>
+  )
+}
