@@ -1,0 +1,32 @@
+.card {
+  max-width: 270px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.imageWrapper {
+  background-color: #F2F3F5;
+  height: 278px;
+  width: 100%;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  color: #343434;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-family: 'Open-Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #873101;
+}

@@ -3,32 +3,33 @@ import Slider from "react-slick";
 import { MainPageCard } from './Card/MainPageCard'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import './MainPageSlider.scss'
+import styles from './MainPageSlider.module.scss'
 
 interface MainPageItem {
   btnBackgroundColor: string;
   btnColor: string;
   background: string;
-  image: any;
+  image: string;
   text: string;
   btnText: string;
   secondaryText: string;
 }
 
 interface sliderProps {
-  slidesToShow: number,
+  slidesToShow?: number,
   items: MainPageItem[]
 }
 
 export const MainPageSlider = ({ slidesToShow, items }: sliderProps) => {
   const settings = {
     dots: true,
+    autoplay: true
   }
 
 
   return (
     <div className='container'>
-      <Slider {...settings}>
+      <Slider className={styles.slider} {...settings}>
         {items.map(item => {
           return (
             <MainPageCard
