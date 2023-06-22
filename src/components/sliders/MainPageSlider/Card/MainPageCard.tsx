@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './MainPageCard.module.scss';
+import { MyContainer } from '../../../UI/MyContainer/MyContainer';
 
 interface cardProps {
   btnBackgroundColor: string,
@@ -20,24 +21,26 @@ export const MainPageCard = ({ btnBackgroundColor, btnColor, background, image, 
 
   return (
     <div className={styles.card}>
-      <div className={styles.background} style={{ backgroundColor: background }}></div>
-      <p className={styles.secondary}>{secondaryText}</p>
+      <MyContainer>
+        <div className={styles.background} style={{ backgroundColor: background }}></div>
+        <p className={styles.secondary}>{secondaryText}</p>
 
-      <div className={styles.cardContent}>
-        <div className={styles.textWrapper}>
-          <p className={styles.text}>{text}</p>
+        <div className={styles.cardContent}>
+          <div className={styles.textWrapper}>
+            <p className={styles.text}>{text}</p>
 
-          <button
-            className={styles.btn}
-            style={customBtnStyle}
-          >{btnText}</button>
+            <button
+              className={styles.btn}
+              style={customBtnStyle}
+            >{btnText}</button>
+          </div>
+
+          <div
+            className={styles.img}
+            style={{ backgroundImage: `url(${image})` }}>
+          </div>
         </div>
-
-        <div
-          className={styles.img}
-          style={{ backgroundImage: `url(${image})` }}>
-        </div>
-      </div>
-    </div >
+      </MyContainer>
+    </div>
   )
 }

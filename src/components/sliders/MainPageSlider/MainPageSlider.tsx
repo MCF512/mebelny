@@ -23,27 +23,26 @@ interface sliderProps {
 export const MainPageSlider = ({ slidesToShow, items }: sliderProps) => {
   const settings = {
     dots: true,
-    autoplay: true
+    autoplay: true,
+    arrows: false
   }
 
 
   return (
-    <div className='container'>
-      <Slider className={styles.slider} {...settings}>
-        {items.map(item => {
-          return (
-            <MainPageCard
-              btnBackgroundColor={item.btnBackgroundColor}
-              btnColor={item.btnColor}
-              background={item.background}
-              image={item.image}
-              text={item.text}
-              btnText={item.btnText}
-              secondaryText={item.secondaryText}
-            />
-          )
-        })}
-      </Slider>
-    </div>
+    <Slider className={styles.slider} {...settings}>
+      {items.map(item => {
+        return (
+          <MainPageCard
+            btnBackgroundColor={item.btnBackgroundColor}
+            btnColor={item.btnColor}
+            background={item.background}
+            image={item.image}
+            text={item.text}
+            btnText={item.btnText}
+            secondaryText={item.secondaryText}
+          />
+        )
+      })}
+    </Slider>
   )
 }

@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BasicCard } from "./BasicCard/BasicCard";
 import styles from './BasicSlider.module.scss'
+import { MyContainer } from "../../UI/MyContainer/MyContainer";
 
 interface slide {
   id: number,
@@ -15,24 +16,29 @@ interface slide {
 interface sliderProps {
   showPrice: boolean,
   slidesToShow: number,
-  items: slide[]
+  items: slide[],
+  mb: string
 }
 
-export const BasicSlider = ({ showPrice, slidesToShow, items }: sliderProps) => {
+export const BasicSlider = ({ showPrice, slidesToShow, items, mb }: sliderProps) => {
   const settings = {
-    dots: true,
+    dots: false,
     slidesToShow: slidesToShow,
-    arrows: true
+    arrows: false
+  }
+
+  const style = {
+    '--mb': mb
   }
 
   return (
-    <div className={styles.container}>
-      <Slider {...settings}>
+    <MyContainer>
+      <Slider className={styles.BasicSlider} {...settings} style={style}>
         {items.map(item => {
           return (
             <BasicCard
               key={item.id}
-              showPrice={true}
+              showPrice={showPrice}
               image={item.image}
               price={item.price}
               title={item.title}
@@ -40,6 +46,6 @@ export const BasicSlider = ({ showPrice, slidesToShow, items }: sliderProps) => 
           )
         })}
       </Slider>
-    </div>
+    </MyContainer>
   )
 }
