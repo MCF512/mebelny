@@ -37,11 +37,11 @@ export const BasicSlider = ({ showPrice, slidesToShow, items, mb }: sliderProps)
         {items.map(item => {
           return (
             <BasicCard
-              key={item.id}
+              key={item["id"]}
               showPrice={showPrice}
-              image={item.image}
-              price={item.price}
-              title={item.title}
+              image={item["image"]}
+              price={item["price"]}
+              title={item["title"]}
             />
           )
         })}

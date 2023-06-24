@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../UI/logo/Logo";
 import styles from './header.module.scss'
 
-function Header() {
+export const Header = () => {
   return (
     <header className="header">
       <nav>
@@ -55,5 +55,3 @@ function Header() {
     </header>
   )
 }
-
-export default Header;

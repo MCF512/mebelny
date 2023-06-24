@@ -3,6 +3,7 @@ import styles from './MainPageCard.module.scss';
 import { MyContainer } from '../../../UI/MyContainer/MyContainer';
 
 interface cardProps {
+  id: number;
   btnBackgroundColor: string,
   btnColor: string,
   background: string,
@@ -12,7 +13,7 @@ interface cardProps {
   secondaryText: string
 }
 
-export const MainPageCard = ({ btnBackgroundColor, btnColor, background, image, text, btnText, secondaryText }: cardProps) => {
+export const MainPageCard = ({ id, btnBackgroundColor, btnColor, background, image, text, btnText, secondaryText }: cardProps) => {
 
   const customBtnStyle: {} = {
     '--backColor': btnBackgroundColor,
@@ -20,7 +21,7 @@ export const MainPageCard = ({ btnBackgroundColor, btnColor, background, image, 
   }
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} key={id}>
       <MyContainer>
         <div className={styles.background} style={{ backgroundColor: background }}></div>
         <p className={styles.secondary}>{secondaryText}</p>

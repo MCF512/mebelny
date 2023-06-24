@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": 123,
+      "image": "https://mebmodern.ru/image/cache/catalog/123/1-11/zzz--999994-99-99-99-998-99-999-99zz999z999-qr24--570x570.jpg",
+      "title": "стол V120",
+      "price": 25800
+    },
+    {
+      "id": 113,
+      "image": "https://mebmodern.ru/image/cache/catalog/123/1-11/zzz--999994-99-99-99-998-99-999-99zz999z999-qr24--570x570.jpg",
+      "title": "стол V120",
+      "price": 25800
+    },
+    {
+      "id": 12,
+      "image": "https://mebmodern.ru/image/cache/catalog/123/1-11/zzz--999994-99-99-99-998-99-999-99zz999z999-qr24--570x570.jpg",
+      "title": "стол V120",
+      "price": 25800
+    },
+    {
+      "id": 13,
+      "image": "https://mebmodern.ru/image/cache/catalog/123/1-11/zzz--999994-99-99-99-998-99-999-99zz999z999-qr24--570x570.jpg",
+      "title": "стол V120",
+      "price": 25800
+    },
+    {
+      "id": 14,
+      "image": "https://mebmodern.ru/image/cache/catalog/123/1-11/zzz--999994-99-99-99-998-99-999-99zz999z999-qr24--570x570.jpg",
+      "title": "стол V120",
+      "price": 25800
+    },
+    {
+      "id": 15,
+      "image": "https://mebmodern.ru/image/cache/catalog/123/1-11/zzz--999994-99-99-99-998-99-999-99zz999z999-qr24--570x570.jpg",
+      "title": "стол V120",
+      "price": 25800
+    }
+  ]
+}

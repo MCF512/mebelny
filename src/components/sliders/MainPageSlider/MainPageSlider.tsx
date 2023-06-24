@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import styles from './MainPageSlider.module.scss'
 
 interface MainPageItem {
+  id: number;
   btnBackgroundColor: string;
   btnColor: string;
   background: string;
@@ -33,6 +34,7 @@ export const MainPageSlider = ({ slidesToShow, items }: sliderProps) => {
       {items.map(item => {
         return (
           <MainPageCard
+            id={item.id}
             btnBackgroundColor={item.btnBackgroundColor}
             btnColor={item.btnColor}
             background={item.background}
